@@ -4,7 +4,7 @@ interface Grid {
 
 interface GridResponse {
   grid: Grid;
-  lettersAtCoordinates: string[];
+  liveCode: number;
 }
 
 export { Grid, GridResponse };

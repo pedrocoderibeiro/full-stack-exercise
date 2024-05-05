@@ -1,18 +1,20 @@
 import { Grid, GridResponse } from "@models/grid";
+import { CodeService } from "@services/code/code.service";
 import { TimeService } from "@services/time/time.service";
 
 export class GridService {
   private timeService: TimeService;
+  private codeService: CodeService;
 
   constructor() {
     this.timeService = new TimeService();
+    this.codeService = new CodeService();
   }
 
   generateGrid(letter?: string): GridResponse {
     const currentTime = this.timeService.getCurrentSecondLastTwoDigits(); // Get the last two digits of the current system time
     const firstCoordinate = [Math.floor(currentTime / 10), currentTime % 10]; // Convert the last two digits into coordinates [row, column]
     const secondCoordinate = [currentTime % 10, Math.floor(currentTime / 10)]; // Swap row and column for the second coordinate
-
     const totalCells = 100; // Total number of cells in a 10x10 grid
     const cellsWithLetter = Math.ceil(totalCells * 0.2); // Number of cells with the specified letter
     const lettersPool = Array.from({ length: 26 }, (_, index) =>
@@ -59,6 +61,8 @@ export class GridService {
       return row.sort(() => Math.random() - 0.5);
     });
 
-    return { grid, lettersAtCoordinates };
+    const liveCode = this.codeService.generateCode(grid, lettersAtCoordinates);
+
+    return { grid, liveCode };
   }
 }
