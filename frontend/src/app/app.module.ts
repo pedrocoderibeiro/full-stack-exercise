@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { GridComponent } from './components/grid/grid.component';
 import { LiveCodeComponent } from './components/live-code/live-code.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GeneratorPageComponent } from './components/generator-page/generator-page/generator-page.component';
+import { GeneratorPageComponent } from './components/generator-page/generator-page.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
