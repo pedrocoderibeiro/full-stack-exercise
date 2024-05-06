@@ -1,0 +1,21 @@
+<div *ngIf="grid$ | async as grid; else loading">
+  <div class="grid-container">
+    <div *ngFor="let row of grid; let i = index" class="grid-row">
+      <div *ngFor="let cell of row; let j = index" class="grid-cell">
+        {{ cell }}
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="grid-container">
+    <div
+      *ngFor="let row of generateDefaultGrid(); let i = index"
+      class="grid-row"
+    >
+      <div *ngFor="let cell of row; let j = index" class="grid-cell">
+        {{ cell }}
+      </div>
+    </div>
+  </div>
+</ng-template>

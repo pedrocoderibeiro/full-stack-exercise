@@ -1,0 +1,17 @@
+<div class="generator-page-container">
+  <div class="label-input-container">
+    <label for="textInput" class="input-label">Character:</label>
+    <div class="input-button-container">
+      <input
+        type="text"
+        placeholder="Character"
+        [(ngModel)]="characterInput"
+        class="input-field"
+        maxlength="1"
+      />
+      <button (click)="generate()" class="button">Generate 2D Grid</button>
+    </div>
+  </div>
+  <app-grid></app-grid>
+  <app-live-code></app-live-code>
+</div>

@@ -1,0 +1,7 @@
+<div class="live-status">
+  <div class="circle" [ngClass]="{ red: !isLive, green: isLive }"></div>
+  <span>{{ isLive ? "Live" : "Not Live" }}</span>
+</div>
+<div class="live-code-box">
+  <pre>{{ liveCode }}</pre>
+</div>

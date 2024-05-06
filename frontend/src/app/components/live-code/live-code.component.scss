@@ -1,0 +1,31 @@
+.live-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.live-code-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.live-code-box pre {
+  margin: 0; /* Remove default margin */
+}

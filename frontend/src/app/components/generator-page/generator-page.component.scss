@@ -1,0 +1,42 @@
+.generator-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vw;
+}
+
+.input-label {
+  margin-bottom: 0.5vw;
+}
+
+.input-button-container {
+  display: flex;
+}
+
+.input-field {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1vw 2vw;
+  margin-bottom: 1vw;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 4vw;
+  padding: 1vw 2vw;
+  color: #000;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #eee;
+}
